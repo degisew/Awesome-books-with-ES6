@@ -1,7 +1,6 @@
 import {
   navBar, listLink, addLink, contactLink,
 } from '../modules/navBar.js';
-// import { Book } from "../modules/addRemoveBook.js";
 import { listBook, displayPage } from '../modules/bookListPage.js';
 import { anyRandomName, book, bookList } from '../modules/listOfBooks.js';
 import { luxon } from '../modules/luxon.js';
@@ -10,9 +9,6 @@ const section = document.querySelector('.container');
 const mainForm = document.getElementById('book-form');
 const currentDate = document.createElement('div');
 currentDate.id = 'displayDateTime';
-
-// Imported from navBar.js
-// navBar;
 
 const now = luxon.DateTime.now();
 const { year } = now;
@@ -30,7 +26,6 @@ currentDate.innerHTML = dateTime;
 
 displayPage.append(bookList);
 
-// SPA implementation
 window.addEventListener('load', () => {
   listBook();
 });
